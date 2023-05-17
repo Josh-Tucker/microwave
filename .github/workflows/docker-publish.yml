@@ -8,8 +8,8 @@ name: Docker
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-    IMAGE_TAGS: latest
-    IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  IMAGE_TAGS: latest
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 on:
   pull_request:
     branches:
