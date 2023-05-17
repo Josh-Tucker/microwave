@@ -1,5 +1,9 @@
 FROM registry.fedoraproject.org/fedora-toolbox:38
 
+COPY repos/ /repos/
+RUN grep -rEh '^gpgkey=' /repos/ | sed 's/^.*=//' | xargs rpm --import
+RUN mv /repos/* /etc/yum.repos.d/
+
 COPY packages /
 RUN dnf update -y && \
     dnf upgrade -y && \
