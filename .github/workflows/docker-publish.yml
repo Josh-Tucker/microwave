@@ -6,10 +6,10 @@ name: Docker
 # documentation.
 
 env:
-  # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
+    IMAGE_TAGS: latest
+    IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 on:
   pull_request:
     branches:
@@ -21,11 +21,6 @@ on:
       - main
     paths-ignore:
       - '**/README.md'
-env:
-    IMAGE_NAME: dev
-    IMAGE_TAGS: latest
-    IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
-
 
 jobs:
   build:
