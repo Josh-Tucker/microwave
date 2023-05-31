@@ -6,7 +6,7 @@ Dev image for Distrobox based on [boxkit](https://github.com/ublue-os/boxkit/tre
 
 * Based on fedora 38 toolbox image
 * Installs additional packages listed in `packages` file
-* Symlinks handy tools from host OS  
+* Symlinks handy tools from host OS  (Silverblue Specific)
 
 ## Setup
 
