@@ -13,14 +13,14 @@ Dev image for Distrobox based on [boxkit](https://github.com/ublue-os/boxkit/tre
 Distrobox:
 
 ```bash
-distrobox create -i ghcr.io/josh-tucker/microwave -n microwave
+distrobox create -i ghcr.io/josh-tucker/microwave:main -n microwave
 distrobox enter microwave
 ```
 
 Toolbox:
 
 ```bash
-toolbox create -i ghcr.io/josh-tucker/microwave -c microwave
+toolbox create -i ghcr.io/josh-tucker/microwave:main -c microwave
 toolbox enter microwave
 ```
 
